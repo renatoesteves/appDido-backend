@@ -23,7 +23,6 @@ const router = Router();
 const upload = multer(uploadConfig.upload("./tmp"));
 
 // -- ROTAS USER ---
-router.get("/", isAuthenticated)
 router.post('/users', new CreateUserController().handle)
 router.post('/session', new AuthUserController().handle)
 router.get('/me', isAuthenticated, new DetailUserController().handle)
