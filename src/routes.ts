@@ -23,6 +23,7 @@ const router = Router();
 const upload = multer(uploadConfig.upload("./tmp"));
 
 // -- ROTAS USER ---
+router.get("/", isAuthenticated)
 router.post('/users', new CreateUserController().handle)
 router.post('/session', new AuthUserController().handle)
 router.get('/me', isAuthenticated, new DetailUserController().handle)
@@ -34,7 +35,8 @@ router.get('/category', isAuthenticated, new ListCategoryController().handle)
 
 
 // -- ROTAS PRODUCT --
-router.post('/product', isAuthenticated, upload.single('file'), new CreateProductController().handle)
+// router.post('/product', isAuthenticated, upload.single('file'), new CreateProductController().handle)
+router.post('/product', isAuthenticated, new CreateProductController().handle)
 
 
 // -- ROTAS Category --
