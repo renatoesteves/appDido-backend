@@ -80,6 +80,5 @@ O **AppDido** é um sistema desenvolvido para auxiliar restaurantes no gerenciam
 ## Contribuição
 Sinta-se à vontade para abrir issues e pull requests para melhorias no sistema.
 
-## Licença
-Este projeto está licenciado sob a [MIT License](LICENSE).
+
 
